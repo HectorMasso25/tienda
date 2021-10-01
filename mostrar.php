@@ -1,34 +1,32 @@
 <?php
-//incluye la clase Libro y CrudLibro
-require_once('crud_libro.php');
-require_once('libro.php');
-$crud=new CrudLibro();
-$libro= new Libro();
-//obtiene todos los libros con el método mostrar de la clase crud
-$listaLibros=$crud->mostrar();
+
+require_once('crud_tienda.php');
+require_once('tienda.php');
+$crud=new CrudTienda();
+$tienda= new Tienda();
+//obtiene todos los tiendas con el método mostrar de la clase crud
+$listaTiendas=$crud->mostrar();
 ?>
 
 <html>
 <head>
-	<title>Mostrar Libros</title>
+	<title>Mostrar Tiendas</title>
 </head>
 <body>
 	<table border=1>
 		<head>
 			<td>Nombre</td>
-			<td>Autor</td>
-			<td>Edicion</td>
+			<td>Fecha de Apertura</td>
 			<td>Actualizar</td>
 			<td>Eliminar</td>
 		</head>
 		<body>
-			<?php foreach ($listaLibros as $libro) {?>
+			<?php foreach ($listaTiendas as $tienda) {?>
 			<tr>
-				<td><?php echo $libro->getNombre() ?></td>
-				<td><?php echo $libro->getAutor() ?></td>
-				<td><?php echo $libro->getAnio_edicion()?> </td>
-				<td><a href="actualizar.php?id=<?php echo $libro->getId()?>&accion=a">Actualizar</a> </td>
-				<td><a href="administrar_libro.php?id=<?php echo $libro->getId()?>&accion=e">Eliminar</a>   </td>
+				<td><?php echo $tienda->getNombre() ?></td>
+				<td><?php echo $tienda->getApertura()?> </td>
+				<td><a href="actualizar.php?id=<?php echo $tienda->getId()?>&accion=a">Actualizar</a> </td>
+				<td><a href="administrar_tienda.php?id=<?php echo $tienda->getId()?>&accion=e">Eliminar</a>   </td>
 			</tr>
 			<?php }?>
 		</body>
