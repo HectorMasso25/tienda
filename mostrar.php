@@ -17,6 +17,7 @@ $listaTiendas=$crud->mostrar();
 		<head>
 			<td>Nombre</td>
 			<td>Fecha de Apertura</td>
+			<td>Productos</td>
 			<td>Actualizar</td>
 			<td>Eliminar</td>
 		</head>
@@ -25,6 +26,7 @@ $listaTiendas=$crud->mostrar();
 			<tr>
 				<td><?php echo $tienda->getNombre() ?></td>
 				<td><?php echo $tienda->getApertura()?> </td>
+				<td><a href="mostrarprod.php?id=<?php echo $tienda->getId()?>&accion=a">Ver Productos</a> </td>
 				<td><a href="actualizar.php?id=<?php echo $tienda->getId()?>&accion=a">Actualizar</a> </td>
 				<td><a href="administrar_tienda.php?id=<?php echo $tienda->getId()?>&accion=e">Eliminar</a>   </td>
 			</tr>
