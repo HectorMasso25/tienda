@@ -1,23 +1,19 @@
 <html>
 <head>
-	<title> Ingresar Libro</title>
+	<title> Ingresar Tienda</title>
 </head>
 <header>
-Ingresa los datos del Libro
+Ingresa los datos del Tienda
 </header>
-<form action='administrar_libro.php' method='post'>
+<form action='administrar_tienda.php' method='post'>
 	<table>
 		<tr>
-			<td>Nombre libro:</td>
+			<td>Nombre tienda:</td>
 			<td> <input type='text' name='nombre'></td>
 		</tr>
 		<tr>
-			<td>Autor:</td>
-			<td><input type='text' name='autor' ></td>
-		</tr>
-		<tr>
-			<td>Fecha Edición:</td>
-			<td><input type='text' name='edicion' ></td>
+			<td>Fecha de Apertura:</td>
+			<td><input type='date' name='apertura' ></td>
 		</tr>
 		<input type='hidden' name='insertar' value='insertar'>
 	</table>
